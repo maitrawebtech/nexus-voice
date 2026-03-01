@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 NexusVoice AI: The Autonomous Brand-Engine
 
-## Getting Started
+**NexusVoice** is a next-generation "Content Multiplier" built for the agent-first era. It leverages **Gemini 3.1 Pro** and an orchestrated multi-agent architecture to transform long-form technical transcripts, blogs, or documentation into a synchronized multi-platform content campaign in seconds.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Multimodal Ingestion:** Drop in a YouTube transcript, a technical whitepaper, or a raw `.mp4` file.
+* **Orchestrated Agent Squad:** Parallel execution of platform-specific agents:
+    * **The Architect (LinkedIn):** High-authority, technical thought leadership.
+    * **The Threader (X/Twitter):** High-velocity, viral hooks and threads.
+    * **The Scripter (Shorts/TikTok):** Visual-first storytelling and CTAs.
+    * **The Curator (Newsletter):** Structured summaries for Substack/Email.
+* **Brand Voice DNA:** Customizable "System Instructions" to ensure the AI sounds like a Cloud & AI Developer, not a generic chatbot.
+* **Self-Healing UI:** Built with **Antigravity** to allow real-time feedback loops between agents.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Layer | Technology |
+| :--- | :--- |
+| **Model** | Gemini 3.1 Pro (via Vertex AI) |
+| **Orchestration** | Antigravity Agent Manager |
+| **Frontend** | Next.js 15, Tailwind CSS, Zustand |
+| **Backend** | FastAPI, Pydantic |
+| **Infrastructure** | Google Cloud Run, GCS, Artifact Registry |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏗️ Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NexusVoice uses a **Supervisor-Worker** pattern. The Supervisor analyzes the input for "Atomic Insights" and broadcasts them to the Specialist Agents.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+```mermaid
+graph TD
+    A[User Upload] --> B(Supervisor Agent)
+    B --> C{The Analyst}
+    C --> D[LinkedIn Specialist]
+    C --> E[X Threader]
+    C --> F[Video Scripter]
+    C --> G[Newsletter Editor]
+    D & E & F & G --> H[Review Dashboard]
