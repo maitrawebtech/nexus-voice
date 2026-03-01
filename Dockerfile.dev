@@ -1,0 +1,11 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files to install before mapping volume to avoid native module issues
+COPY package.json package-lock.json* ./
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
